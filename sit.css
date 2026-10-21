@@ -1,0 +1,874 @@
+
+/* =========================
+   1. 基本設定
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 30px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, "Noto Sans JP", sans-serif;
+    color: #000000;
+    background-color: #ffffff;
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+}
+
+button {
+    font: inherit;
+}
+
+::selection {
+    color: #ffffff;
+    background-color: #111111;
+}
+
+/* =========================
+   2. トップ画面
+========================= */
+
+.hero {
+    min-height: 100vh;
+    background-color: #000000;
+    color: #b63fa8;
+    padding: 0 8%;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 25px 0;
+    border-bottom: 1px solid #333333;
+}
+
+.logo {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #888888;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #aaaaaa;
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 2px;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 80px 0;
+}
+
+.eyebrow {
+    color: #999999;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 9vw, 110px);
+    line-height: 1.05;
+    letter-spacing: -3px;
+    margin: 25px 0;
+}
+
+.hero h1 span {
+    color: #888888;
+}
+
+.hero-description {
+    color: #cccccc;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 22px;
+    border: 1px solid #777777;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.hero-button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.hero-button span {
+    margin-left: 10px;
+}
+
+.hero-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 0;
+    border-top: 1px solid #333333;
+    color: #888888;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   3. 共通セクション
+========================= */
+
+.section {
+    padding: 100px 10%;
+}
+
+.section-label {
+    margin: 0 0 25px;
+    color: #777777;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.section h2,
+.join-section h2 {
+    margin: 0 0 25px;
+    font-size: clamp(30px, 4.5vw, 54px);
+    line-height: 1.35;
+    letter-spacing: -1px;
+}
+
+.section-intro {
+    margin: 0 0 45px;
+    color: #666666;
+    font-size: 15px;
+}
+
+/* =========================
+   4. About
+========================= */
+
+.about {
+    background-color: #ffffff;
+    color: #111111;
+}
+
+.about h2 {
+    font-size: clamp(30px, 4.5vw, 52px);
+    line-height: 1.6;
+}
+
+.about-description {
+    max-width: 720px;
+    margin: 20px 0;
+    color: #555555;
+    font-size: 16px;
+    line-height: 2.2;
+}
+
+/* =========================
+   5. Activities
+========================= */
+
+.activities {
+    background-color: #f4f4f4;
+}
+
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    background-color: #dddddd;
+    border: 1px solid #dddddd;
+}
+
+.activity-card {
+    min-height: 260px;
+    padding: 30px;
+    background-color: #ffffff;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.activity-card:hover {
+    background-color: #111111;
+    color: #ffffff;
+}
+
+.card-number {
+    color: #888888;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.activity-card h3 {
+    margin: 20px 0 0;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+.card-tag {
+    color: #888888;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.activity-card > p:last-child {
+    font-size: 14px;
+    line-height: 2;
+}
+
+/* =========================
+   6. Events
+========================= */
+
+.events {
+    background-color: #ffffff;
+}
+
+.event-item {
+    display: grid;
+    grid-template-columns: 125px minmax(0, 1fr);
+    gap: 30px;
+    padding: 35px 0;
+    border-top: 1px solid #dddddd;
+}
+
+.event-date {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.event-date span {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.event-date small {
+    color: #777777;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.event-category {
+    margin: 0;
+    color: #777777;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.event-info h3 {
+    margin: 8px 0;
+    font-size: 22px;
+}
+
+.event-info > p:not(.event-category) {
+    color: #666666;
+    font-size: 14px;
+}
+
+.event-info a {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 13px;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 5px;
+}
+
+.event-note {
+    margin-top: 20px;
+    color: #777777;
+    font-size: 12px;
+}
+
+/* =========================
+   7. Join Us
+========================= */
+
+.join-section {
+    padding: 100px 10%;
+    background-color: #080808;
+    color: #ffffff;
+    text-align: center;
+}
+
+.join-section .section-label {
+    color: #999999;
+}
+
+.join-section > p:not(.section-label) {
+    color: #cccccc;
+    font-size: 15px;
+    line-height: 2;
+}
+
+.preparation-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+    padding: 10px 16px;
+    border: 1px solid #555555;
+    color: #dddddd;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #aaaaaa;
+}
+
+.join-section .join-note {
+    margin-top: 25px;
+    color: #999999;
+    font-size: 13px;
+}
+
+/* =========================
+   8. フッター
+========================= */
+
+.footer {
+    padding: 35px 8%;
+    background-color: #080808;
+    color: #ffffff;
+    border-top: 1px solid #333333;
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.footer > p {
+    color: #aaaaaa;
+    font-size: 12px;
+}
+
+.footer .copyright {
+    margin-top: 25px;
+    color: #777777;
+    font-size: 10px;
+}
+
+/* =========================
+   9. スマートフォン対応
+========================= */
+
+@media (max-width: 700px) {
+    .hero {
+        padding: 0 6%;
+    }
+
+    .navbar {
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6px;
+        width: 42px;
+        height: 42px;
+        padding: 8px;
+        border: 1px solid #555555;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #ffffff;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: calc(100% + 1px);
+        left: 0;
+        right: 0;
+        z-index: 10;
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 20px;
+        background-color: #111111;
+        border: 1px solid #333333;
+    }
+
+    .nav-links.is-open {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 14px 0;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .eyebrow {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-footer {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .section {
+        padding: 75px 7%;
+    }
+
+    .activity-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-card {
+        min-height: auto;
+        padding: 25px;
+    }
+
+    .event-item {
+        grid-template-columns: 75px minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .event-date span {
+        font-size: 36px;
+    }
+
+    .event-info h3 {
+        font-size: 19px;
+    }
+
+    .join-section {
+        padding: 75px 7%;
+    }
+
+    .footer {
+        padding: 30px 6%;
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+/* ===== Interactive Calendar ===== */
+
+.events-section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.section-description {
+  color: #777b85;
+  margin-top: 14px;
+  line-height: 1.8;
+}
+
+.calendar-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.95fr);
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.calendar-panel,
+.event-detail-panel {
+  border: 1px solid #dedfe3;
+  border-radius: 7px;
+  padding: 22px;
+  min-width: 0;
+}
+
+.calendar-header,
+.calendar-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.calendar-header {
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.calendar-navigation {
+  gap: 12px;
+}
+
+.calendar-navigation h3 {
+  font-size: 22px;
+  margin: 0 0 0 8px;
+}
+
+
+.calendar-arrow {
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+
+  transition: background-color 0.2s;
+}
+
+.calendar-arrow:hover {
+  background-color: #eeeeef;
+}
+
+
+.calendar-arrow:hover {
+  background: #eeeeef;
+}
+
+.calendar-weekdays,
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.calendar-weekdays {
+  text-align: center;
+  font-size: 13px;
+  color: #6d7079;
+  padding-bottom: 12px;
+}
+
+.calendar-days {
+  border-top: 1px solid #ececf0;
+}
+
+.calendar-day {
+  position: relative;
+  min-width: 0;
+  min-height: 76px;
+  border: 0;
+  border-right: 1px solid #f0f0f2;
+  border-bottom: 1px solid #f0f0f2;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 7px;
+  padding-top: 12px;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.calendar-day:hover {
+  background: #f4f4f5;
+}
+
+.calendar-day.outside-month {
+  color: #b7b9c0;
+  background: #fcfcfc;
+}
+
+.calendar-day.selected {
+  background: #f0f0f1;
+  font-weight: 700;
+}
+
+.calendar-day.selected .day-number {
+  width: 34px;
+  height: 34px;
+  margin-top: -5px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: white;
+  background: #111;
+}
+
+.calendar-day:focus-visible,
+.calendar-arrow:focus-visible {
+  outline: 2px solid #555;
+  outline-offset: -3px;
+}
+
+.day-dot,
+.event-dot {
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: #626875;
+  border-radius: 50%;
+}
+
+.calendar-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #777b85;
+  font-size: 12px;
+  margin: 16px 0 0;
+}
+
+.detail-label,
+.upcoming-title {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: #777b85;
+  font-weight: 700;
+}
+
+.event-detail-panel h3 {
+  font-size: 19px;
+  margin: 12px 0 18px;
+}
+
+.detail-divider {
+  height: 1px;
+  background: #e7e7e9;
+  margin-bottom: 14px;
+}
+
+.event-details {
+  display: grid;
+  gap: 12px;
+}
+
+.event-card {
+  border: 1px solid #e0e0e3;
+  border-radius: 7px;
+  padding: 20px;
+}
+
+.event-card.featured {
+  background: #111214;
+  border-color: #111214;
+  color: white;
+}
+
+.event-category {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: #777b85;
+  margin: 0 0 10px;
+  font-weight: 700;
+}
+
+.featured .event-category {
+  color: #c2c4cb;
+}
+
+.event-card h4 {
+  font-size: 17px;
+  line-height: 1.5;
+  margin: 0 0 10px;
+}
+
+.event-card p.event-description {
+  font-size: 13px;
+  line-height: 1.9;
+  color: #737680;
+  margin: 0 0 14px;
+}
+
+.event-card.featured p.event-description {
+  color: #d0d1d6;
+}
+
+.event-link {
+  display: inline-block;
+  color: inherit;
+  font-size: 13px;
+  text-underline-offset: 4px;
+  margin-top: 4px;
+}
+
+.no-events {
+  padding: 28px 10px;
+  color: #777b85;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.upcoming-events {
+  display: grid;
+  grid-template-columns: 140px repeat(2, minmax(0, 1fr));
+  margin-top: 28px;
+  border-top: 1px solid #e7e7e9;
+  border-bottom: 1px solid #e7e7e9;
+}
+
+.upcoming-title,
+.upcoming-item {
+  padding: 20px 14px;
+  margin: 0;
+}
+
+.upcoming-item {
+  border-left: 1px solid #e7e7e9;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  text-align: left;
+  background: white;
+  cursor: pointer;
+}
+
+.upcoming-item:hover {
+  background: #f7f7f8;
+}
+
+.upcoming-date {
+  font-weight: 700;
+  white-space: nowrap;
+  font-size: 15px;
+}
+
+.upcoming-info {
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.upcoming-info small {
+  display: block;
+  color: #777b85;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  margin-bottom: 4px;
+}
+
+.events-footnote {
+  margin-top: 22px;
+  font-size: 12px;
+  line-height: 1.8;
+  color: #777b85;
+}
+
+@media (max-width: 800px) {
+  .events-section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .calendar-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .calendar-panel,
+  .event-detail-panel {
+    padding: 16px;
+  }
+
+  .calendar-day {
+    min-height: 58px;
+    padding-top: 10px;
+    font-size: 13px;
+  }
+
+  .calendar-navigation h3 {
+    font-size: 19px;
+  }
+
+  .upcoming-events {
+    grid-template-columns: 1fr;
+  }
+
+  .upcoming-title,
+  .upcoming-item {
+    padding: 15px 10px;
+  }
+
+  .upcoming-item {
+    border-left: 0;
+    border-top: 1px solid #e7e7e9;
+  }
+}
+
+
+/* イベント一覧：2件分だけ見せて残りはスクロール */
+.upcoming-list {
+  display: flex;
+  flex-direction: column;
+  height: 152px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #b8b8bd transparent;
+}
+
+.upcoming-list .upcoming-item {
+  flex: 0 0 76px;
+  min-height: 76px;
+  width: 100%;
+  box-sizing: border-box;
+}
+

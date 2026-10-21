@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SIT Hacker Association</title>
+    <meta name="description" content="SIT Hacker Association。セキュリティを、もっと身近に。CTFや情報セキュリティを学び、技術を試し、共有するコミュニティを目指す設立準備プロジェクトです。">
+
+    <link rel="stylesheet" href="sit.css">
+</head>
+
+<body>
+    <header class="hero" id="top">
+        <nav class="navbar">
+            <a href="#top" class="logo">SIT<span>HACK</span></a>
+
+            <button class="menu-toggle" id="menu-toggle"
+                    aria-label="メニューを開く"
+                    aria-expanded="false">
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-links" id="nav-links">
+                <a href="#about">ABOUT</a>
+                <a href="#activities">ACTIVITIES</a>
+                <a href="#events">EVENTS</a>
+            </div>
+        </nav>
+
+        <main class="hero-content">
+            <p class="eyebrow">SHIBAURA INSTITUTE OF TECHNOLOGY</p>
+
+            <h1>
+                SIT HACKER</br>
+                 ASSOCIATION<span>.</span>
+            </h1>
+
+            <p class="hero-description">
+                
+            </p>
+
+            <a href="#about" class="hero-button">
+                EXPLORE MORE <span>↓</span>
+            </a>
+        </main>
+
+        <div class="hero-footer">
+            <span>LEARN. CREATE. DEFEND.</span>
+            <span>EST. 2026 / PREPARATION PROJECT</span>
+        </div>
+    </header>
+
+    <section class="about section" id="about">
+        <p class="section-label">01 / ABOUT</p>
+
+        <h2>
+            WHO WE ARE.
+        </h2>
+
+        <p class="about-description">
+            SITハッカー協会はCTFや情報セキュリティを通じて
+            技術を学び、試し、共有するコミュニティを目指す設立準備プロジェクトです。
+            初心者から経験者まで、一緒に学びながら成長できる場を目指しています。
+        </p>
+
+        <p class="about-description">
+            攻撃の仕組みを理解すること。そして、その知識を防御や安全なシステムづくりに
+            つなげること。楽しみながら、実践的な技術を身につけていきます。
+        </p>
+    </section>
+
+
+    <section class="activities section" id="activities">
+        <p class="section-label">02 / ACTIVITIES</p>
+
+        <h2>WHTAT WE DO.</h2>
+
+        <p class="section-intro">
+            
+        </p>
+
+        <div class="activity-grid">
+            <article class="activity-card">
+                <span class="card-number">01</span>
+                <h3>CTF</h3>
+                <p class="card-tag">CAPTURE THE FLAG</p>
+                <p>
+                    暗号、Web、バイナリ解析などの問題に挑戦。
+                    チームで考えながら、実践的な技術を身につけます。
+                </p>
+            </article>
+
+            <article class="activity-card">
+                <span class="card-number">02</span>
+                <h3>SECURITY</h3>
+                <p class="card-tag">THINK & ANALYZE</p>
+                <p>
+                    脆弱性や攻撃の仕組みを学び、
+                    安全なシステムを作るための考え方を身につけます。
+                </p>
+            </article>
+
+            <article class="activity-card">
+                <span class="card-number">03</span>
+                <h3>BUILD</h3>
+                <p class="card-tag">CREATE & SHARE</p>
+                <p>
+                    学習ツールやプログラムを制作。
+                    解いた問題や発見した知識を、みんなで共有します。
+                </p>
+            </article>
+
+            <article class="activity-card">
+                <span class="card-number">04</span>
+                <h3>EVENTS</h3>
+                <p class="card-tag">PLAY TOGETHER</p>
+                <p>
+                    CTF大会への参加や勉強会、ミニゲームなどを通じて、
+                    楽しみながらセキュリティに触れます。
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <!-- イベント情報 -->
+   
+<section class="section events-section" id="events">
+  <div class="section-heading">
+    <p class="section-label">03 / EVENTS</p>
+    <h2>WHAT’S HAPPENING?</h2>
+    <p class="section-description">
+      セキュリティに触れるきっかけを見つけよう。
+    </p>
+  </div>
+
+  <div class="calendar-layout">
+    <!-- 左：カレンダー -->
+    <div class="calendar-panel">
+      <div class="calendar-header">
+        <div class="calendar-navigation">
+          <button id="prev-month" class="calendar-arrow"
+            type="button" aria-label="前の月">‹</button>
+          <button id="next-month" class="calendar-arrow"
+            type="button" aria-label="次の月">›</button>
+          <h3 id="calendar-month">2026年 10月</h3>
+        </div>
+      </div>
+
+      <div class="calendar-weekdays">
+        <span>月</span>
+        <span>火</span>
+        <span>水</span>
+        <span>木</span>
+        <span>金</span>
+        <span>土</span>
+        <span>日</span>
+      </div>
+
+      <div id="calendar-days" class="calendar-days"></div>
+
+      <p class="calendar-note">
+        <span class="event-dot"></span>
+        イベント開催日
+      </p>
+    </div>
+
+    <!-- 右：選択した日の詳細 -->
+    <aside class="event-detail-panel">
+      <p class="detail-label">SELECTED DATE</p>
+      <h3 id="selected-date">2026年10月23日（金）</h3>
+      <div class="detail-divider"></div>
+      <div id="event-details" class="event-details"></div>
+    </aside>
+  </div>
+
+  <div class="upcoming-events">
+    <p class="upcoming-title">UPCOMING EVENTS</p>
+    <div id="upcoming-list" class="upcoming-list"></div>
+  </div>
+
+  <p class="events-footnote">
+    ※ 開催日時・参加条件などの最新情報は、各イベントの公式ページで確認してください。
+  </p>
+</section>
+
+
+    <!-- メンバー募集・準備状況 -->
+    <section class="join-section">
+        <p class="section-label">04 / JOIN US</p>
+
+        <h2>YOUR NEXT<br>CHALLENGE STARTS HERE.</h2>
+
+        <p>
+            セキュリティに興味がある。CTFをやってみたい。<br>
+            そんな気持ちから、一歩を踏み出そう。
+        </p>
+
+        <div class="preparation-label">
+            <span class="status-dot"></span>
+            COMMUNITY IN PREPARATION
+        </div>
+
+        <p class="join-note">
+            現在、活動内容や運営体制を検討中です。<br>
+            正式な活動開始・メンバー募集については、決まり次第お知らせします。
+        </p>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <a href="#top" class="footer-logo">SIT HACKER ASSOCIATION</a>
+
+        <p>セキュリティを、もっと身近に。</p>
+
+        <p class="copyright">
+            © 2026 SIT Hacker Association — Preparation Project
+        </p>
+    </footer>
+
+    <script src="sit.js"></script>
+</body>
+</html>
